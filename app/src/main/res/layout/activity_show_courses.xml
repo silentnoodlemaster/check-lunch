@@ -5,19 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ShowCourses">
 
-    <Button
-        android:id="@+id/acqua"
+    <TextView
+        android:id="@+id/restaurantName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onAcqua"
-        android:text="Acqua" />
+        android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/explorer"
+    <ListView
+        android:id="@+id/courses"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onExplorer"
-        android:text="Explorer" />
+        android:layout_height="match_parent" />
 </LinearLayout>

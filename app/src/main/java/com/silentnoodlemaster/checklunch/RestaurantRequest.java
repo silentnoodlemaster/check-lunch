@@ -25,9 +25,9 @@ public class RestaurantRequest extends AsyncTask<String, Void, Restaurant> {
                 courses[i] = new Course(
                         course.getString("title_fi"),
                         course.getString("title_en"),
-                        course.getString("category"),
+                        course.has("category")? course.getString("category"): "",
                         course.getString("price"),
-                        course.getString("properties"),
+                        course.has("properties")? course.getString("properties"): "",
                         course.getString("desc_fi"),
                         course.getString("desc_en"),
                         course.getString("desc_se")

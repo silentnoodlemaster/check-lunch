@@ -47,6 +47,9 @@ public class Course {
     }
     @Override
     public String toString() {
-        return category + ": " + title_en + ". " + price + "€";
+
+        String s = !category.isEmpty()? category + ": " : "";
+        s += title_en + " " + price + "€";
+        return s;
     }
 }
