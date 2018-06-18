@@ -17,7 +17,7 @@ public class ShowCourses extends AppCompatActivity {
         setContentView(R.layout.activity_show_courses);
         String id = getIntent().getStringExtra("id");
         Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy/mm/dd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy/MM/dd");
         String url = "https://www.sodexo.fi/ruokalistat/output/daily_json/" + id + "/" + simpleDateFormat.format(date) + "/fi";
         try {
             Restaurant restaurant = new RestaurantRequest().execute(url).get();
