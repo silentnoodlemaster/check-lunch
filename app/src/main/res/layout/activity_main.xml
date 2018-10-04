@@ -20,4 +20,11 @@
         android:layout_height="wrap_content"
         android:onClick="onExplorer"
         android:text="Explorer" />
+
+    <Button
+        android:id="@+id/arcada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onArcada"
+        android:text="Arcada" />
 </LinearLayout>
