@@ -22,7 +22,12 @@ public class AmicaRequest extends AsyncTask<String, Void, Amica> {
             AmicaCourse[] courses = new AmicaCourse[JSONCourses.length()];
             for (int i = 0; i < JSONCourses.length(); i++) {
                 JSONArray course = JSONCourses.getJSONObject(i).getJSONArray("Components");
-                courses[i] = new AmicaCourse(course.getString(0));
+                StringBuilder courseString = new StringBuilder();
+                for (int j = 0; j < course.length(); j++) {
+                    courseString.append(course.getString(j));
+                    courseString.append("\n");
+                }
+                courses[i] = new AmicaCourse(courseString.toString().trim());
             }
             return new Amica(restaurantName, courses);
         } catch (Exception e) {
