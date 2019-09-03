@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onArcada(View v) {
         Intent intent = new Intent(this, ShowCourses.class);
-        intent.putExtra("url", "https://www.amica.fi/modules/json/json/Index?costNumber=3003&language=en");
+        intent.putExtra("url", "https://www.fazerfoodco.fi/modules/json/json/Index?costNumber=3003&language=en");
         intent.putExtra("restaurant", "amica");
         startActivity(intent);
     }
